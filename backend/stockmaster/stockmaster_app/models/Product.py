@@ -18,3 +18,6 @@ class Product(models.Model):
         category, created = Category.objects.get_or_create(name=category_name)
         self.category = category
         
+    def __str__(self) -> str:
+        return self.name
+        
